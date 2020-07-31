@@ -1,0 +1,28 @@
+.card-container{
+    max-width: 900px;
+    margin: 0px auto;
+    background: #606060;
+    padding: 12px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+
+  @media screen and (max-width: 800px) and (min-width: 670px) {
+    .card-container {
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .card-container{
+        align-items: flex-start;
+    }
+}
