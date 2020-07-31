@@ -1,4 +1,5 @@
 import React from 'react';
+import Home from './Home';
 import Contact from './Contact'
 import CardList from './CardList'
 
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <div className="App">
+      <Home />
       <CardList className="card-container" cards={cards}/>
       <Contact />
     </div>
