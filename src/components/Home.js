@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import image from '../My_pic.jpeg';
-import './Home.css';
+import '../css/home.css';
 
 class Home extends Component {
     render() {
