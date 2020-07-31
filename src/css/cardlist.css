@@ -1,7 +1,6 @@
 .card-container{
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0px auto;
-    background: #606060;
     padding: 12px;
     margin: auto;
     display: flex;

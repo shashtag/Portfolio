@@ -9,18 +9,13 @@ const Card = props => {
         return (
             <div className='card-body'>
                 <img src={props.image} className='card-image' alt=''></img>
-                <div>
-                    <div className='card-title'>
-                        {props.title}
-                    </div>
-                    <div className='card-content'>
-                        {props.content}
-                    </div>
-                    <div className='button-container'>
-                    <button className='card-button'>Home</button>
-                    </div>
-                    </div>
+                <div className='card-title'>
+                   <u>{props.title}</u>
+                </div>
+                {/* <div className='button-container'> */}
+                {/* <button className='card-button'>Home</button> */}
             </div>
+            // </div>
         );
 };
 
