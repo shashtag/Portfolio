@@ -1,4 +1,5 @@
 import React from 'react'
+// eslint-disable-next-line
 import { render } from '@testing-library/react'
 
 import '../css/card.css'
