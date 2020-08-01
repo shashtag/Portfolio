@@ -18,6 +18,130 @@ code {
   color: #121212;
 }
 
+/* Backdrop Component */
+* {
+  box-sizing: border-box;
+}
+.backdrop {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+@media (min-width: 769px) {
+  .backdrop {
+    display: none;
+  }
+}
+
+/* Drawer Component */
+.drawer {
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 100%;
+  width: 275px;
+  z-index: 2;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+}
+.drawer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.drawer a {
+  color: black;
+  text-decoration: none;
+}
+.a {
+  border: black 2px solid;
+}
+.drawer.open {
+  transform: translateX(0) !important;
+}
+@media (min-width: 769px) {
+  .drawer {
+    display: none;
+  }
+}
+
+/* Hamburger Component */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  height: 24px;
+  width: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  justify-content: space-around;
+}
+.hamburger-line {
+  width: 32px;
+  height: 2px;
+  background-color: #4a5759;
+}
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Navbar Component */
+.page-header {
+  padding: 0 30px;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  height: 56px;
+  background-color: white;
+}
+.page-header .navbar-logo a {
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+  white-space: nowrap;
+}
+.page-header .navbar {
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+.page-header .navbar-links a {
+  color: black;
+  text-decoration: none;
+}
+
+.page-header .navbar-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.page-header .navbar-links ul li {
+  padding: 0 0.5rem;
+}
+.page-header .between {
+  flex: 1;
+}
+.a {
+  border: 3px solid black;
+}
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+}
+
 /* Home Component */
 
 .laptop {

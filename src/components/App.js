@@ -100,8 +100,6 @@ function App() {
       {backdrop}
       {/* div for fixed navbar height remove this and add padding to the hero page  */}
       <div style={{ height: "64px" }}></div>
-      <br />
-      <br />
       <Home />
       <CardList className="card-container" cards={projectCards} />
 
