@@ -15,10 +15,10 @@ const drawer = props =>{
     <div className={drawerClass}>
       <nav >
         <ul>
-          <li><a href="/">link 1</a></li>
-          <li><a href="/">link 2</a></li>
-          <li><a href="/">link 3</a></li>
-          <li><a href="/">link 4</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Experience</a></li>
+          <li><a href="/">Projects</a></li>
+          <li><a href="/">Contact</a></li>
         </ul>
       </nav>
     </div>
