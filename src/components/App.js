@@ -6,7 +6,6 @@ import Drawer from './navbar/drawer'
 import Backdrop from './navbar/backdrop'
 import Contact from './Contact'
 import CardList from './CardList'
-import backdrop from './navbar/backdrop';
 
 
 function App() {
