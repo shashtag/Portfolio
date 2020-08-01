@@ -8,10 +8,15 @@ import ecomm from "../assests/ecomm.jpg";
 import quote from "../assests/quote.jfif";
 import tictactoe from "../assests/tictactoe.png";
 import worldmap from "../assests/worldmap.gif";
-import Links from "./Links";
+import c from "../assests/c-logo-transparent.png";
+import cpp from "../assests/cpp_logo.png";
+import html from "../assests/html-logo.webp";
+import js from "../assests/js-logo.png";
+import matlab from "../assests/Matlab-Logo.png";
+import python from "../assests/python-logo.png";
 
 function App() {
-  let cards = [
+  let projectCards = [
     {
       image: blog,
       title: "Blog Website",
@@ -38,10 +43,39 @@ function App() {
     },
   ];
 
+  let expCards = [
+    {
+      image: c,
+      title: "C language",
+    },
+    {
+      image: cpp,
+      title: "C++",
+    },
+    {
+      image: html,
+      title: "HTML",
+    },
+    {
+      image: js,
+      title: "Java Script",
+    },
+    {
+      image: matlab,
+      title: "MatLab",
+    },
+    {
+      image: python,
+      title: "Python",
+    },
+  ];
+
   return (
     <div className="App">
       <Home />
-      <CardList className="card-container" cards={cards} />
+      <CardList className="card-container" cards={projectCards} />
+
+      <CardList className="card-container" cards={expCards} />
       <Contact />
     </div>
   );

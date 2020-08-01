@@ -130,3 +130,105 @@ code {
     padding-right: 50px;
   }
 }
+
+/* CardList Component */
+.card-container {
+  margin: 0px 10%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 800px) and (min-width: 670px) {
+  .card-container {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .card-container {
+    align-items: flex-start;
+  }
+}
+
+/* Card Component */
+.card-body {
+  width: 30%;
+  color: #ddd;
+  border-radius: 0px;
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 400px;
+  padding: 0;
+  margin: 0 0 5% 0;
+}
+
+.card-title {
+  margin: 6px 0;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 800px) and (min-width: 670px) {
+  .card-body {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .card-body {
+    width: 45%;
+    padding: 0px;
+    margin: 30px;
+    color: #ddd;
+  }
+}
+
+/* Contact Component */
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+input,
+textarea {
+  height: 5vh;
+  width: 45vw;
+  background-color: rgba(151, 151, 151, 0.1);
+  border: 1px solid rgb(179, 179, 179);
+  border-radius: 2px;
+  margin-top: 1%;
+  margin-bottom: 4%;
+}
+textarea {
+  height: 10vh;
+}
+label {
+  color: rgba(82, 82, 82, 0.6);
+}
+.contact-name {
+  width: 21.5vw;
+}
+button {
+  border: 2px solid black;
+  background-color: white;
+  border-radius: 2px;
+  height: 6vh;
+  width: 8vw;
+  font-size: 14px;
+}
