@@ -99,7 +99,7 @@ function App() {
       <Drawer show={drawerState} />
       {backdrop}
       {/* div for fixed navbar height remove this and add padding to the hero page  */}
-      <div style={{ height: "64px" }}></div>
+      <div style={{ height: "5rem" }}></div>
       <Home />
       <CardList className="card-container" cards={projectCards} />
 
