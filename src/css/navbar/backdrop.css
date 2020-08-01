@@ -10,3 +10,8 @@
   width: 100%;
   z-index: 1;
 }
+@media (min-width: 769px) {
+  .backdrop {
+    display: none;
+ }
+}

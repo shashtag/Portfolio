@@ -5,10 +5,10 @@
   position: fixed;
   width: 100%;
   height: 56px;
-  background-color: #f6f4d2;
+  
 }
 .page-header .navbar-logo a {
-  color: #4a5759;
+  color: black;
   text-decoration: none;
   font-size: 2rem;
   white-space: nowrap;
@@ -19,11 +19,11 @@
   display: flex;
 }
 .page-header .navbar-links a {
-  color: #4a5759;
+  color: black;
   text-decoration: none;
 }
 .page-header .navbar-links a:hover, .page-header .navbar-links a:active {
-  color: #35a7ff;
+  
 }
 .page-header .navbar-links ul {
   list-style: none;
