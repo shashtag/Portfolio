@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React, { useState } from "react";
 
 // importing all components
 import Home from "./Home";
@@ -10,35 +10,36 @@ import ecomm from "../assests/ecomm.jpg";
 import quote from "../assests/quote.jfif";
 import tictactoe from "../assests/tictactoe.png";
 import worldmap from "../assests/worldmap.gif";
-import Navbar from  './navbar/navbar';
-import Drawer from './navbar/drawer';
-import Backdrop from './navbar/backdrop';
-
-
+import c from "../assests/c-logo-transparent.png";
+import cpp from "../assests/cpp_logo.png";
+import html from "../assests/html-logo.webp";
+import js from "../assests/js-logo.png";
+import matlab from "../assests/Matlab-Logo.png";
+import python from "../assests/python-logo.png";
+import Navbar from "./navbar/navbar";
+import Drawer from "./navbar/drawer";
+import Backdrop from "./navbar/backdrop";
 
 function App() {
-
   // navbar functions and variables
 
   const [drawerState, setDrawerState] = useState(false);
 
-
-  const hamburerClickHandler = () =>{
-    setDrawerState(!drawerState)
+  const hamburerClickHandler = () => {
+    setDrawerState(!drawerState);
   };
 
-  const backdropClickHandler = () =>{
-    setDrawerState(false)
+  const backdropClickHandler = () => {
+    setDrawerState(false);
   };
 
   let backdrop;
 
-  if(drawerState){
-    backdrop = <Backdrop click={backdropClickHandler} />
+  if (drawerState) {
+    backdrop = <Backdrop click={backdropClickHandler} />;
   }
 
-
-  let cards = [
+  let projectCards = [
     {
       image: blog,
       title: "Blog Website",
@@ -65,16 +66,44 @@ function App() {
     },
   ];
 
+  let expCards = [
+    {
+      image: c,
+      title: "C language",
+    },
+    {
+      image: cpp,
+      title: "C++",
+    },
+    {
+      image: html,
+      title: "HTML",
+    },
+    {
+      image: js,
+      title: "Java Script",
+    },
+    {
+      image: matlab,
+      title: "MatLab",
+    },
+    {
+      image: python,
+      title: "Python",
+    },
+  ];
+
   return (
     <div className="App">
-      <Navbar hamClickHandler = {hamburerClickHandler} />
+      <Navbar hamClickHandler={hamburerClickHandler} />
       <Drawer show={drawerState} />
       {backdrop}
       {/* div for fixed navbar height remove this and add padding to the hero page  */}
-      <div style={{height: '64px'}}></div>
-      <CardList className="card-container" cards={cards}/>
+      <div style={{ height: "64px" }}></div>
       <Home />
-      <CardList className="card-container" cards={cards} />
+      <CardList className="card-container" cards={projectCards} />
+
+      <CardList className="card-container" cards={expCards} />
       <Contact />
     </div>
   );
