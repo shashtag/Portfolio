@@ -1,22 +1,46 @@
-import React from 'react';
-import Home from './Home';
-import Contact from './Contact'
-import CardList from './CardList'
+import React from "react";
+import Home from "./Home";
+import Contact from "./Contact";
+import CardList from "./CardList";
+import blog from "../assests/blog.jpg";
+import calc from "../assests/calc.jpg";
+import ecomm from "../assests/ecomm.jpg";
+import quote from "../assests/quote.jfif";
+import tictactoe from "../assests/tictactoe.png";
+import worldmap from "../assests/worldmap.gif";
 
 function App() {
-
   let cards = [
-    {image : 'https://www.researchgate.net/profile/Gareth_Roberts10/publication/251839685/figure/fig3/AS:652228557803529@1532514814266/a-A-SEVIRI-400-x-400-pixel-scene-of-southern-Africa-September-4-th-1212pm.png', title: 'Title for img 1'},
-    {image : 'https://www.researchgate.net/profile/Gareth_Roberts10/publication/251839685/figure/fig3/AS:652228557803529@1532514814266/a-A-SEVIRI-400-x-400-pixel-scene-of-southern-Africa-September-4-th-1212pm.png', title: 'Title for img 2'},
-    {image : 'https://www.researchgate.net/profile/Gareth_Roberts10/publication/251839685/figure/fig3/AS:652228557803529@1532514814266/a-A-SEVIRI-400-x-400-pixel-scene-of-southern-Africa-September-4-th-1212pm.png', title: 'Title for img 2'},
-    {image : 'https://www.researchgate.net/profile/Gareth_Roberts10/publication/251839685/figure/fig3/AS:652228557803529@1532514814266/a-A-SEVIRI-400-x-400-pixel-scene-of-southern-Africa-September-4-th-1212pm.png', title: 'Title for img 4'},
-    {image : 'https://www.researchgate.net/profile/Gareth_Roberts10/publication/251839685/figure/fig3/AS:652228557803529@1532514814266/a-A-SEVIRI-400-x-400-pixel-scene-of-southern-Africa-September-4-th-1212pm.png', title: 'Title for img 5'}
-  ]
+    {
+      image: blog,
+      title: "Blog Website",
+    },
+    {
+      image: calc,
+      title: "Calculator",
+    },
+    {
+      image: ecomm,
+      title: "E-Commerce Website",
+    },
+    {
+      image: quote,
+      title: "Quote Generator",
+    },
+    {
+      image: tictactoe,
+      title: "Tic Tac Toe",
+    },
+    {
+      image: worldmap,
+      title: "Data on World Map",
+    },
+  ];
 
   return (
     <div className="App">
       <Home />
-      <CardList className="card-container" cards={cards}/>
+      <CardList className="card-container" cards={cards} />
       <Contact />
     </div>
   );
