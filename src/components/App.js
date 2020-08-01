@@ -1,7 +1,8 @@
 import React from 'react';
 import Home from './Home';
-import Contact from './Contact'
-import CardList from './CardList'
+import Contact from './Contact';
+import CardList from './CardList';
+import Links from './Links';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Home />
       <CardList className="card-container" cards={cards}/>
       <Contact />
+      <Links />
     </div>
   );
 }
