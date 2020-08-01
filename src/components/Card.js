@@ -1,6 +1,5 @@
-import React from "react";
+import React from 'react'
 
-import "../css/card.css";
 
 const Card = props => {
   console.log("[cards.js] rendering ...");

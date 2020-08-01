@@ -1,4 +1,6 @@
-import React from "react";
+import React,{useState} from 'react';
+
+// importing all components
 import Home from "./Home";
 import Contact from "./Contact";
 import CardList from "./CardList";
@@ -8,9 +10,34 @@ import ecomm from "../assests/ecomm.jpg";
 import quote from "../assests/quote.jfif";
 import tictactoe from "../assests/tictactoe.png";
 import worldmap from "../assests/worldmap.gif";
-import Links from "./Links";
+import Navbar from  './navbar/navbar';
+import Drawer from './navbar/drawer';
+import Backdrop from './navbar/backdrop';
+
+
 
 function App() {
+
+  // navbar functions and variables
+
+  const [drawerState, setDrawerState] = useState(false);
+
+
+  const hamburerClickHandler = () =>{
+    setDrawerState(!drawerState)
+  };
+
+  const backdropClickHandler = () =>{
+    setDrawerState(false)
+  };
+
+  let backdrop;
+
+  if(drawerState){
+    backdrop = <Backdrop click={backdropClickHandler} />
+  }
+
+
   let cards = [
     {
       image: blog,
@@ -40,6 +67,12 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar hamClickHandler = {hamburerClickHandler} />
+      <Drawer show={drawerState} />
+      {backdrop}
+      {/* div for fixed navbar height remove this and add padding to the hero page  */}
+      <div style={{height: '64px'}}></div>
+      <CardList className="card-container" cards={cards}/>
       <Home />
       <CardList className="card-container" cards={cards} />
       <Contact />
