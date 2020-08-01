@@ -8,6 +8,7 @@ import ecomm from "../assests/ecomm.jpg";
 import quote from "../assests/quote.jfif";
 import tictactoe from "../assests/tictactoe.png";
 import worldmap from "../assests/worldmap.gif";
+import Links from "./Links";
 
 function App() {
   let cards = [
