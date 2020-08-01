@@ -18,36 +18,156 @@ code {
   color: #121212;
 }
 
+/* Backdrop Component */
+* {
+  box-sizing: border-box;
+}
+.backdrop {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+}
+@media (min-width: 769px) {
+  .backdrop {
+    display: none;
+  }
+}
+
+/* Drawer Component */
+.drawer {
+  height: 100vh;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  max-width: 100%;
+  width: 275px;
+  z-index: 4;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+}
+.drawer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.drawer ul li {
+  padding: 1rem 0.5rem;
+}
+.drawer a {
+  color: black;
+  text-decoration: none;
+}
+.a {
+  border: black 2px solid;
+}
+.drawer.open {
+  transform: translateX(0) !important;
+}
+@media (min-width: 769px) {
+  .drawer {
+    display: none;
+  }
+}
+
+/* Hamburger Component */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  height: 24px;
+  width: 32px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  justify-content: space-around;
+}
+.hamburger-line {
+  width: 32px;
+  height: 2px;
+  background-color: #4a5759;
+}
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+/* Navbar Component */
+.page-header {
+  padding: 1rem;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  background-color: white;
+}
+.page-header .navbar-logo a {
+  color: black;
+  text-decoration: none;
+  font-size: 2rem;
+  white-space: nowrap;
+}
+.page-header .navbar {
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+.page-header .navbar-links a {
+  color: black;
+  text-decoration: none;
+}
+
+.page-header .navbar-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.page-header .navbar-links ul li {
+  padding: 0 0.5rem;
+}
+.page-header .between {
+  flex: 1;
+}
+.a {
+  border: 3px solid black;
+}
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .page-header {
+    padding: 0.5rem 6rem;
+  }
+  .page-header .navbar {
+    display: block;
+  }
+  .page-header .navbar-logo {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .page-header .navbar-logo a {
+    text-align: center;
+    font-size: 3rem;
+  }
+  .page-header .navbar-links ul {
+    justify-content: space-evenly;
+    padding-bottom: 1rem;
+  }
+}
+
 /* Home Component */
 
-.laptop {
-  display: block;
-}
-
-.ipad {
-  display: none;
-}
-
-.split {
-  width: 50%;
-  padding-top: 20px;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-}
-
-.left {
-  text-align: center;
-  padding-left: 10%;
-  position: absolute;
-  top: 20%;
-  -ms-transform: translateY(-50%, -50%);
-  transform: translateY(-50%);
-}
-
-.right {
-  right: 0;
+.image {
   text-align: center;
 }
 
@@ -58,76 +178,73 @@ code {
   padding-bottom: 20px;
 }
 
-.desc h2 {
-  font-size: 50px;
-}
-
 .intro {
-  padding-top: 350px;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-bottom: 50px;
 }
 
 .intro h2 {
   text-align: left;
-  font-size: 100px;
+  font-size: 50px;
   padding-bottom: 10px;
   /*padding-left: 300px;*/
 }
 
 .intro p {
   color: rgba(82, 82, 82, 0.6);
-
-  /*padding-left: 300px;
-    padding-right: 300px;*/
   font-size: 18px;
   line-height: 35px;
 }
 
-@media screen and (max-width: 1000px) {
-  .laptop {
-    display: none;
-  }
-
-  .ipad {
-    display: block;
-    padding-top: 20px;
-  }
-
-  .image {
-    text-align: center;
-  }
-
-  .desc {
-    text-align: center;
-  }
-
+@media screen and (max-width: 965px) {
   .intro {
-    padding-top: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
 }
 
 @media screen and (max-width: 800px) {
   .intro {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
   }
 }
 
-@media screen and (max-width: 650px) {
-  .desc h2 {
+@media screen and (max-width: 765px) {
+  .intro {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .intro h2 {
     font-size: 40px;
+  }
+
+  .intro p {
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .intro {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .intro h2 {
+    font-size: 30px;
   }
 }
 
 @media screen and (max-width: 450px) {
-  .desc h2 {
-    font-size: 30px;
-  }
-
   .intro {
     padding-left: 50px;
     padding-right: 50px;
+  }
+
+  .intro p {
+    line-height: 25px;
   }
 }
 
