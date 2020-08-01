@@ -27,13 +27,31 @@ class Contact extends React.Component {
     }
     onFormSubmit = (e) => {
         e.preventDefault();
-        axios({
-            method: "POST",
-            url: "https://formspree.io/xzbjodpk",
-            data: this.state
-        }).then((response) => {
-            console.log(response);
-        })
+        if (this.handleValidation()) {
+            alert("Form submitted");
+        }
+        // axios({
+        //     method: "POST",
+        //     url: "https://formspree.io/xzbjodpk",
+        //     data: this.state
+        // }).then((response) => {
+        //     console.log(response);
+        // })
+    }
+    handleValidation = () => {
+        if (this.state.fname === "" || this.state.email === "" || this.state.subject === "" || this.state.message === "") {
+            alert("Fields with * are mandatory");
+            return false;
+        }
+
+        let lastAtPos = this.state.email.lastIndexOf('@');
+        let lastDotPos = this.state.email.lastIndexOf('.');
+        if (!(lastAtPos < lastDotPos && lastAtPos > 0 && this.state.email.indexOf('@@') === -1 && lastDotPos > 2 && (this.state.email.length - lastDotPos) > 2)) {
+            alert("Please enter valid email!");
+            return false;
+        }
+
+        return true;
     }
     render() {
         return (
@@ -44,7 +62,7 @@ class Contact extends React.Component {
                         <label htmlFor="fname">Name*</label>
                     </div>
                     <div className="name">
-                        <input type="text" className="contact-name" id="fname" value={this.state.fname} onChange={this.onFnameChange} ></input>
+                        <input type="text" className="contact-name" id="fname" value={this.state.fname} onChange={this.onFnameChange}></input>
                         <input type="text" className="contact-name" id="lname" value={this.state.lname} onChange={this.onLnameChange}></input>
                     </div>
                     <div>
