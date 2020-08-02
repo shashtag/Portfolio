@@ -1,13 +1,7 @@
-import React from 'react';
+import React from "react";
 
-// importing css
+// backdrop component
 
-import '../../css/navbar/backdrop.css';
-
-// backdrop component 
-
-const backdrop = props =>(
-    <div className="backdrop" onClick={props.click} />
-);
+const backdrop = props => <div className="backdrop" onClick={props.click} />;
 
 export default backdrop;
