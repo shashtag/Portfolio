@@ -28,13 +28,6 @@ class Contact extends React.Component {
     if (this.handleValidation()) {
       alert("Form submitted");
     }
-    // axios({
-    //     method: "POST",
-    //     url: "https://formspree.io/xzbjodpk",
-    //     data: this.state
-    // }).then((response) => {
-    //     console.log(response);
-    // })
   };
   handleValidation = () => {
     if (
@@ -43,7 +36,7 @@ class Contact extends React.Component {
       this.state.subject === "" ||
       this.state.message === ""
     ) {
-      alert("Fields with * are mandatory");
+      alert("All Fields are mandatory");
       return false;
     }
 
@@ -66,11 +59,11 @@ class Contact extends React.Component {
   };
   render() {
     return (
-      <div className="contact-main">
-        <h3>CONTACT</h3>
+      <div className="contact-main" id="contact-main">
+        <h1>CONTACT</h1>
         <form className="form" onSubmit={this.onFormSubmit}>
           <div>
-            <label htmlFor="fname">Name*</label>
+            <label htmlFor="fname">Name</label>
           </div>
           <div className="name">
             <input
@@ -87,7 +80,7 @@ class Contact extends React.Component {
               onChange={this.onLnameChange}></input>
           </div>
           <div>
-            <label htmlFor="email">Email Address*</label>
+            <label htmlFor="email">Email Address</label>
           </div>
           <div>
             <input
@@ -97,7 +90,7 @@ class Contact extends React.Component {
               onChange={this.onEmailChange}></input>
           </div>
           <div>
-            <label htmlFor="subject">Subject*</label>
+            <label htmlFor="subject">Subject</label>
           </div>
           <div>
             <input
@@ -107,7 +100,7 @@ class Contact extends React.Component {
               onChange={this.onSubjectChange}></input>
           </div>
           <div>
-            <label htmlFor="message">Message*</label>
+            <label htmlFor="message">Message</label>
           </div>
           <div>
             <textarea
