@@ -18,6 +18,11 @@ code {
   color: #121212;
 }
 
+.App {
+  width: 90%;
+  margin: 0 5%;
+}
+
 /* Backdrop Component */
 * {
   box-sizing: border-box;
@@ -176,12 +181,12 @@ code {
   height: 300px;
   border: 2px solid #ffffff;
   padding-bottom: 20px;
+  margin: 7% 0;
 }
 
 .intro {
-  padding-left: 250px;
-  padding-right: 250px;
-  padding-bottom: 50px;
+  padding: 0 250px 50px 250px;
+  margin-bottom: 7%;
 }
 
 .intro h2 {
@@ -252,7 +257,6 @@ code {
 
 /* CardList Component */
 .card-container {
-  margin: 0px 10%;
   margin: auto;
   display: flex;
   justify-content: space-evenly;
@@ -281,6 +285,8 @@ code {
   width: 30%;
   color: #ddd;
   border-radius: 0px;
+  cursor: pointer;
+  margin: 3%;
 }
 
 .card-image {

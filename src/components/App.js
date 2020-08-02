@@ -7,15 +7,15 @@ import CardList from "./CardList";
 import blog from "../assests/blog.jpg";
 import calc from "../assests/calc.jpg";
 import ecomm from "../assests/ecomm.jpg";
-import quote from "../assests/quote.jfif";
-import tictactoe from "../assests/tictactoe.png";
-import worldmap from "../assests/worldmap.gif";
+import quote from "../assests/quote-generator.jpg";
+import chatApp from "../assests/chatApp.jpg";
+import covid from "../assests/COVID-19-infographic.png";
 import c from "../assests/c-logo-transparent.png";
 import cpp from "../assests/cpp_logo.png";
 import html from "../assests/html-logo.webp";
 import js from "../assests/js-logo.png";
-import matlab from "../assests/Matlab-Logo.png";
 import python from "../assests/python-logo.png";
+import reactLogo from "../assests/react-logo.png";
 import Navbar from "./navbar/navbar";
 import Drawer from "./navbar/drawer";
 import Backdrop from "./navbar/backdrop";
@@ -57,19 +57,19 @@ function App() {
       title: "Quote Generator",
     },
     {
-      image: tictactoe,
-      title: "Tic Tac Toe",
+      image: chatApp,
+      title: "Chat Application",
     },
     {
-      image: worldmap,
-      title: "Data on World Map",
+      image: covid,
+      title: "Coronavirus Tracker",
     },
   ];
 
   let expCards = [
     {
       image: c,
-      title: "C language",
+      title: "C",
     },
     {
       image: cpp,
@@ -84,8 +84,8 @@ function App() {
       title: "Java Script",
     },
     {
-      image: matlab,
-      title: "MatLab",
+      image: reactLogo,
+      title: "React",
     },
     {
       image: python,
@@ -106,9 +106,21 @@ function App() {
       <br />
 
       <Home />
-      <CardList className="card-container" cards={projectCards} />
 
-      <CardList className="card-container" cards={expCards} />
+      <div>
+        <h1 className="card-container-title" id="exp">
+          Experience
+        </h1>
+        <CardList className="card-container" cards={expCards} />
+      </div>
+
+      <div>
+        <h1 className="card-container-title" id="proj">
+          Projects
+        </h1>
+        <CardList className="card-container" cards={projectCards} />
+      </div>
+
       <Contact />
     </div>
   );

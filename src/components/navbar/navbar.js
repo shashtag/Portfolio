@@ -9,7 +9,9 @@ const navbar = props => (
   <header className="page-header">
     <nav className="navbar">
       <div className="navbar-logo ">
-        <a href="/">Aviroop Nandy</a>
+        <a className="name-link" href="/">
+          Aviroop Nandy
+        </a>
       </div>
 
       {/* to push the logo and navlinks to each end */}
@@ -21,10 +23,10 @@ const navbar = props => (
             <a href="/">About</a>
           </li>
           <li>
-            <a href="/">Experience</a>
+            <a href="#exp">Experience</a>
           </li>
           <li>
-            <a href="/">Projects</a>
+            <a href="#proj">Projects</a>
           </li>
           <li>
             <a href="#contact-main">Contact</a>
