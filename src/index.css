@@ -193,6 +193,8 @@ code {
 
 .intro p {
   color: rgba(82, 82, 82, 0.6);
+  /*padding-left: 300px;
+  padding-right: 300px;*/
   font-size: 18px;
   line-height: 35px;
 }
