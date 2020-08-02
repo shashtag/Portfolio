@@ -59,7 +59,7 @@ class Contact extends React.Component {
   };
   render() {
     return (
-      <div className="contact-main">
+      <div className="contact-main" id="contact-main">
         <h3>CONTACT</h3>
         <form className="form" onSubmit={this.onFormSubmit}>
           <div>
