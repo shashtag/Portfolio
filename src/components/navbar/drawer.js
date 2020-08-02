@@ -1,6 +1,6 @@
 import React from "react";
 
-// drawer component thath is sohow on click of hamburger?
+// drawer component that is sohow on click of hamburger?
 
 const drawer = props => {
   let drawerClass = "drawer";
